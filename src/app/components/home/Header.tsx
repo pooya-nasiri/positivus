@@ -9,10 +9,10 @@ function Header() {
                 Navigating the digital landscape for success
             </h1>
             <Image src={headerLogo}alt='Logo' className='sm:hidden'/>
-            <p className='text-[clamp(1rem,1.5vw,10rem)] sm:text-[clamp(0.9rem,1vw,5rem)] md:text-[clamp(1.1rem,1vw,5rem)] lg:text-[clamp(1.2rem,1vw,5rem)] xl:text-3xl'>
+            <p className='text-[clamp(1rem,1.5vw,10rem)] sm:text-[clamp(0.9rem,1vw,5rem)] md:text-[clamp(1.1rem,1vw,5rem)] lg:text-[clamp(1.2rem,1vw,5rem)] xl:text-3xl font-light'>
                 Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.
             </p>
-            <button className='bg-f2 w-full py-[clamp(1rem,5vw,5rem)] text-f3 rounded-xl sm:p-2.5 sm:w-fit xl:py-3'>Book a consultation</button>
+            <button  className='bg-f2 w-full py-[clamp(1rem,5vw,5rem)] text-f3 rounded-xl sm:p-2.5 sm:w-fit xl:py-5 xl:text-xl xl:px-5 mt-1.5 cursor-pointer'>Book a consultation</button>
         </section>
         {/* Tablet and more device */}
         <section>

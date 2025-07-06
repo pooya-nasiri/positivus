@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import {Space_Grotesk} from "next/font/google";
 import "./globals.css";
 import Navbar from '@/app/(UI)/Layuot'
-const space_Grotesk = Space_Grotesk({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
+import {Space_Grotesk} from "next/font/google"
+const space_Grotesk=Space_Grotesk({
+  subsets:['latin']
+})
 
 
 export const metadata: Metadata = {
@@ -20,10 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={space_Grotesk.className}>
+    <html lang="en" className={space_Grotesk.className} >
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" href="/icon.ico" sizes="any" />
-      <body className="p-4 sm:p-7 md:p-8 lg:p-9 xl:p-10 grid grid-cols-1 items-center justify-center text-f2">
+      <body className="p-4 sm:p-7 md:p-8 lg:p-9 xl:p-10 grid grid-cols-1  items-center justify-center text-f2 ">
         <Navbar/>
         {children}
       </body>
