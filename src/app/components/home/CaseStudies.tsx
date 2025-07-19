@@ -1,7 +1,12 @@
 import React from 'react'
 import { MdArrowOutward } from "react-icons/md";
-import Marquee from 'react-fast-marquee';
+import { text } from 'stream/consumers';
 function CaseStudies() {
+    const items =[
+        {id:1,text:"For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales."},
+        {id:2,text:"For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic."},
+        {id:3,text:"For a national retail chain, we created a social media marketing campaign that increased followers by 25% and generated a 20% increase in online sales."}
+    ]
   return (
     <section className='flex flex-col space-y-15'>
         {/* Titile */}
@@ -14,39 +19,18 @@ function CaseStudies() {
         </p>
       </div>
 
-      <div  className=' overflow-x-scroll  xl:py-30 snap-x flex sm:bg-f2 sm:rounded-3xl  sm:w-full gap-15 sm:p-15 xl:px-45  '>
-
-        <div className=' bg-f2 min-w-[265px] snap-start p-5 space-y-4 rounded-3xl sm:rounded-sm sm:border-r-2 sm:border-f3 sm:w-1/2 sm:py-0'>
-            <p className='text-f3 text-[0.9rem] sm:text-[0.9rem]'>
-                For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.
+      <div className='flex overflow-scroll xl:overflow-hidden sm:items-center md:space-x-0 md:p-[clamp(0.5rem,2vw,1.25rem)] lg:p-[clamp(1.25rem,2vw,2.25rem)]  md:justify-center space-x-4 sm:bg-f2 sm:rounded-3xl '>
+        {items.map((item)=>(
+              <div key={item.id} className='justify-around flex flex-col bg-f2 space-y-5 min-w-60 text-f3 min-h-6 p-5   px-6 rounded-3xl text-[0.8rem] lg:text-[clamp(0.5rem,1.5vw,1.25rem)] '>
+            <p>
+                {item.text}
             </p>
-            <a className='text-f1 flex items-center gap-1.5'>
-                Learn More
-                <MdArrowOutward className='size-7 rotate-18'/>
+            <a className='flex items-center text-f1 gap-0.5 '>
+                Learn more
+                <MdArrowOutward className='size-7'/>
             </a>
-            </div>
-
-        <div className=' bg-f2 min-w-[265px]  p-5 space-y-4 rounded-3xl sm:rounded-sm sm:border-r-2 sm:border-f3 sm:w-1/2 sm:py-0'>
-            <p className='text-f3 text-[0.9rem] sm:text-[0.9rem]'>
-                For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.
-            </p>
-            <a className='text-f1 flex items-center gap-1.5'>
-                Learn More
-                <MdArrowOutward className='size-7 rotate-18'/>
-            </a>
-            </div>
-
-        <div className=' bg-f2 min-w-[265px]  p-5 space-y-4 rounded-3xl sm:rounded-sm sm:border-r-2 sm:border-f3 sm:w-1/2 sm:py-0'>
-            <p className='text-f3 text-[0.9rem] sm:text-[0.9rem]'>
-                For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.
-            </p>
-            <a className='text-f1 flex items-center gap-1.5'>
-                Learn More
-                <MdArrowOutward className='size-7 rotate-18'/>
-            </a>
-            </div>
-        
-
+        </div>
+        ))}
       </div>
     </section>
   )
