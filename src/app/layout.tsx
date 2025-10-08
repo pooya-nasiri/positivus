@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en" className={space_Grotesk.className} >
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" href="/icon.ico" sizes="any" />
-      <body className="p-4 sm:p-7 md:p-8 lg:p-9 xl:p-10 grid grid-cols-1  items-center justify-center text-f2 ">
+      <body className="p-4 pb-0 sm:pb-0 sm:p-7 md:pb-0 md:p-8 lg:pb-0 lg:p-9 xl:pb-0 xl:p-10 grid grid-cols-1  items-center justify-center text-f2 ">
         <Navbar/>
         {children}
       </body>
